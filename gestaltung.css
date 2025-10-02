@@ -1,0 +1,206 @@
+:root{
+     
+    --text-color: hsl(0, 0%, 0%);
+    --text-color-reverse: hsl(0, 0%, 100%);
+    --akcent-color: hsla(240, 80%, 50%, 0.833);
+    --border-color: hsla(0, 0%, 0%, 0.499);
+    
+}
+
+html{
+    font-family: sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    
+}
+
+body{
+    margin: 0;
+}
+
+.site{
+    min-height: 100dvh; 
+   /* display: grid;
+    grid-template-rows: auto 1fr auto;*/
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    
+}
+
+h1{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+h2{
+    color: var(--text-color);
+    /*background-color: darkgray;*/
+    font-size: 80px;
+    font-weight: 400;
+}
+
+p{
+    hyphens: auto;
+    overflow-wrap: break-word;
+} 
+
+a{
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+
+.header{
+    padding-inline: 20px;
+    padding-block: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /*border-bottom: 7px solid black;*/
+}
+
+.header li{
+    list-style: none;
+    display: block;
+}
+
+.nav{
+    
+    margin-block: 50px;
+
+    min-width: 100dvh;
+
+}
+
+.nav :hover{
+    transition: all 0.1s ease-in-out 0.1s;
+    background-color: var(--akcent-color);
+    color: var(--text-color-reverse);
+    
+}
+
+
+
+.nav li{
+    list-style: none;
+    display: block;
+    border-bottom: 7px solid black;
+     /*min-height: 100dvh; /*/
+    min-width: 100dvh;
+    border-inline: none;
+}
+
+/*.erstes-element{
+    color: rgb(3, 79, 4);
+
+}wieso geht first child nicht? …*/
+
+.nav a{
+    text-decoration: none;
+    
+    color: var(--text-color);
+    padding-inline: 3rem;
+    font-size: 80px;
+    min-width: 100dvh;
+    display: block;
+}
+
+.footer{
+    /*background-color: black;*/
+    height: 120px;
+    margin-top: auto;
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 7px solid black;
+    min-width: 100dvh;
+    
+}
+
+.footer li{
+    list-style: none;
+    margin-bottom: 30px;
+    display: block;
+    padding-inline: 10px;
+
+}
+
+
+.tag-1{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    min-width: 100dvh;
+    border-inline: none;
+    padding: none;
+    margin-inline: 0;
+    border-bottom: 7px solid black;
+}
+
+.tag-1 div{
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+   
+    padding-inline: 25px;
+    padding-block: 20px;
+
+}
+
+.tag-1 .programmpunkt:nth-child(2){
+    border-left: 3px solid rgb(165, 165, 165);
+}
+
+
+
+img{
+    object-fit: cover;
+}
+
+.tag-1 div div div{
+    
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    /*border: 1px solid brown;/*/
+    max-height: auto;
+
+}
+
+.tag-1 div div p{
+    text-align: left;
+    flex-grow: 0;
+    max-width: 300px;
+}
+
+/*.tag-1 h1{
+    border-bottom: 7px solid black;    
+    min-width: 100dvh;
+}/*/
+
+
+.tag-1 div:hover{
+   /* background-color: var(--akcent-color);
+    transition: all 0.5s;
+    color: var(--text-color-reverse);   /*/
+}
+
+
+
+
+
+
