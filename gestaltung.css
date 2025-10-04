@@ -47,9 +47,15 @@ h2{
     font-weight: 400;
 }
 
+h3{
+    font-size: smaller;
+    font-weight: lighter;
+}
+
 p{
     hyphens: auto;
     overflow-wrap: break-word;
+    font-size: medium;
 } 
 
 a{
@@ -131,12 +137,10 @@ sup{
 .footer{
     /*background-color: black;*/
     height: 120px;
-    width: 100%;
     
-    
-    padding-top: 30px;
+    padding-top: 20px;
     display: flex;
-    flex-wrap: wrap;
+   
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
@@ -145,17 +149,31 @@ sup{
     
 }
 
+.footer img{
+    width: 10px;
+    flex: 1 1 auto;
+    padding: 40px;
+}
+
+.komma img{
+    
+    
+
+}
+
+
+
 .footer li{
     list-style: none;
     margin-bottom: 30px;
-    display: block;
+    display: flex;
     padding-inline: var(--padding-inline);
 
 }
 
 .container{
     display: grid;
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(5, 200px);
     grid-auto-rows: minmax(260px, auto);
     align-content: center;
     justify-content: center;
@@ -182,6 +200,63 @@ sup{
     
     margin: 0;
     flex: 1 1 auto;
+}
+
+.tag{
+    /*border: 3px solid brown;/*/
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: start;
+    padding-inline: var(--padding-inline);
+    margin-bottom: var(--padding-inline);
+    
+    
+
+}
+
+.tag div{
+    /*border: 1px solid rgb(67, 251, 113);*/
+    margin-right: 20px;
+    margin-block: 20px;
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 100px;
+    display: flex;
+    justify-content: flex-start; 
+    flex-direction: column;  
+    margin-bottom: var(--padding-inline);
+    
+    
+}
+
+.tag sup{
+    color: blue;
+    font-size: x-small;
+}
+
+.tag h2{
+    margin: 0;
+    font-size: 40px;
+    
+}
+
+.tag p{
+    max-width: 300px;
+    margin-block: 7px;
+}
+
+.tag h3{
+    margin-block: 7px;
+    
+}
+
+.tag img{
+    width: 280px;
+    height: 380px;
+   /*/  overflow: hidden;/*/
+    object-fit: cover;
+   
 }
 
 
@@ -260,6 +335,7 @@ img{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-flow: column;
+
     row-gap: 20px;
     column-gap: 30px;
     margin-bottom: var(--padding-inline);
