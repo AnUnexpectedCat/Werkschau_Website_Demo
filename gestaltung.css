@@ -7,10 +7,9 @@
 :root{
      
     --text-color: hsl(0, 0%, 0%);
-    --text-color-reverse: hsl(0, 0%, 100%);
     --akcent-color: #0000ff;
-    --border-color: hsla(0, 0%, 0%, 0.499);
     --padding-inline: 4rem;
+    --border: 5px solid black;
     
 }
 
@@ -109,7 +108,7 @@ h1 {
 }
 
 .home .site section {
-    border-top: 7px solid black;
+    border-top: var(--border)
 }
 
 .site section a {
@@ -126,7 +125,7 @@ h1 {
 
 .ueberschrift {
     border-top: 0;
-    border-bottom: 7px solid black;
+    border-bottom: var(--border);
     line-height: 1.1;
     margin-block: 0;
     padding-inline: var(--padding-inline);
@@ -157,16 +156,10 @@ p{
     font-family: roboto;
     font-weight: 350;
 } 
-/*
-a {
-    text-decoration: none;
-    color: black;
-    display: block;
-    background: none;
-}
-*/
+
 a {
     color: currentColor;
+    text-decoration: none;
 }
 
 li {
@@ -195,13 +188,12 @@ main section {
 .nav :hover {
     /* transition: all 0.1s ease-in-out 0.1s; */
     background-color: var(--akcent-color);
-    color: var(--text-color-reverse);
+    color: white;
     
 }
 
 .nav p{
     max-width: 300px;
-    
 }
 
 .nav h1{
@@ -213,8 +205,7 @@ main section {
 footer {
     padding-block: 50px;
     grid-column-start: span 6;
-    
-    border-top: 7px solid black;
+    border-top: var(--border);
 }
 
 footer ul {
@@ -311,7 +302,7 @@ footer img {
 }
 
 .infobox{
-    border-bottom: 7px solid black;   
+    border-bottom: var(--border);   
     padding-inline: 4rem;
     padding-block: 30px;
     display: grid;
@@ -319,22 +310,19 @@ footer img {
     grid-auto-flow: column;
     row-gap: 20px;
     column-gap: 30px;
-    
-
 }
 
 .infobox div{
-    
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: start;
-    
 }
 
 
-.infobox img{
 
+
+.infobox img{
     width: 100%;
     height: 100%;
     flex: 1 1 auto;
@@ -344,7 +332,6 @@ footer img {
 .infobox h2{
     max-width: 500px;
     margin: 0;
-    
 }
 
 .container{
@@ -353,11 +340,9 @@ footer img {
     grid-auto-rows: minmax(250px, auto);
     align-content: center;
     justify-content: center;
-    
     padding-inline: var(--padding-inline);
     padding-block: 20px;
     gap: 20px;
-
 }
 
 .container img{
