@@ -2,8 +2,7 @@ name: Deploy website to FTP
 
 on:
   # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
+  # push:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -30,4 +29,4 @@ jobs:
         # server-dir: ./
         protocol: ftp
         log-level: verbose
-        dry-run: true
+        # dry-run: true
