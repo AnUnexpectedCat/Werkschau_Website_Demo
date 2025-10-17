@@ -178,11 +178,9 @@
 :root{
      
     --text-color: hsl(0, 0%, 0%);
-    --text-color-reverse: hsl(0, 0%, 100%);
     --akcent-color: #0000ff;
-    --border-color: hsla(0, 0%, 0%, 0.499);
     --padding-inline: 4rem;
-    
+    --border: 5px solid black;
 }
 
 @font-face {
@@ -219,11 +217,10 @@ img {
     grid-template-columns: repeat(6, 1fr);
     gap: 0 1rem;
     margin: 0;
-    outline: 1px solid red;
 }
 
 .site > * {
-    outline: 2px solid green;
+
 }
 
 .site header {
@@ -280,7 +277,7 @@ h1 {
 }
 
 .home .site section {
-    border-top: 7px solid black;
+    border-top: var(--border)
 }
 
 .site section a {
@@ -297,7 +294,7 @@ h1 {
 
 .ueberschrift {
     border-top: 0;
-    border-bottom: 7px solid black;
+    border-bottom: var(--border);
     line-height: 1.1;
     margin-block: 0;
     padding-inline: var(--padding-inline);
@@ -307,10 +304,9 @@ h1 {
 }
 
 details summary {
-    color: #fff;
-    background: #000;
+    color: var(--akcent-color);
     display: inline-block;
-    padding: 0.15em 0.5em 0.35em;
+    padding: 0.5em 0.1em 0.35em;
 }
 
 h3{
@@ -327,14 +323,7 @@ p{
     font-family: roboto;
     font-weight: 350;
 } 
-/*
-a {
-    text-decoration: none;
-    color: black;
-    display: block;
-    background: none;
-}
-*/
+
 a {
     color: currentColor;
 }
@@ -361,12 +350,8 @@ main section {
     grid-column-start: span 6;
 }
 
-
-
-
 .nav p{
     max-width: 300px;
-    
 }
 
 .nav h1{
@@ -378,8 +363,7 @@ main section {
 footer {
     padding-block: 50px;
     grid-column-start: span 6;
-    
-    border-top: 7px solid black;
+    border-top: var(--border);
 }
 
 footer ul {
@@ -392,46 +376,12 @@ footer ul {
 
 footer li {
     flex: 1;
-    /* transition: all 0.2s ease-in-out 0.1s; */
-    background-color: var(--text-color-reverse);
-    color: var(--text-color);
-}
-
-footer li:hover {
-    background-color: var(--akcent-color) !important;
-    color: var(--text-color-reverse);
 }
 
 footer li a {
     display: flex;
     height: 100%;
     align-items: center;
-    background-color: var(--text-color);
-    
-    text-indent: -9999px;
-
-    -webkit-mask-position: center;
-    mask-position: center;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-size: var(--scale);
-    mask-size: var(--scale);
-}
-
-footer li a:hover {
-    background-color: #fff !important;
-}
-
-footer li:nth-child(1) a {
-    --scale: 40%;
-    -webkit-mask-image: url(bilder/log.thMA-sw.jpg);
-    mask-image: url(bilder/log.thMA-sw.jpg);
-}
-
-footer li:nth-child(2) a {
-    --scale: 40%;
-    -webkit-mask-image: url(bilder/logo-mkv-inverted.svg);
-    mask-image: url(bilder/logo-mkv-inverted.svg);
 }
 
 footer img {
@@ -439,37 +389,6 @@ footer img {
     width: 100%;
     margin-inline: auto;
     padding: 10px;
-}
-
-.container{
-    display: grid;
-    grid-template-columns: repeat(4, 200px);
-    grid-auto-rows: minmax(250px, auto);
-    align-content: center;
-    justify-content: center;
-    border-bottom: 7px solid black;
-    padding-inline: var(--padding-inline);
-    padding-block: 20px;
-    gap: 20px;
-
-}
-
-.container div{
-    
-    background-color: rgb(197, 199, 211);
-   
-}
-
-.container div:hover{
-    transition: all 0.1s ease-in-out 0.1s;
-    background-color: var(--akcent-color);
-   
-}
-
-.container img{
-    
-    margin: 0;
-    flex: 1 1 auto;
 }
 
 .tag {
@@ -530,10 +449,7 @@ footer img {
     height: 350px;
    /*/  overflow: hidden;/*/
     object-fit: cover;
-   
 }
-
-
 
 .tag-1 div div p{
     text-align: left;
@@ -542,36 +458,27 @@ footer img {
 }
 
 .infobox{
-    
-    border-bottom: 7px solid black;
-    
-    
+    border-bottom: var(--border);   
     padding-inline: 4rem;
     padding-block: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-flow: column;
-
     row-gap: 20px;
     column-gap: 30px;
-    margin-bottom: var(--padding-inline);
-
 }
 
 .infobox div{
-    
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: start;
-    
 }
 
 
 
 
 .infobox img{
-
     width: 100%;
     height: 100%;
     flex: 1 1 auto;
@@ -581,11 +488,23 @@ footer img {
 .infobox h2{
     max-width: 500px;
     margin: 0;
-    
 }
 
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    grid-auto-rows: minmax(250px, auto);
+    align-content: center;
+    justify-content: center;
+    padding-inline: var(--padding-inline);
+    padding-block: 20px;
+    gap: 20px;
+}
 
-
-
-
+.container img{
+    display: block;
+    width: 100%;
+    margin-inline: auto;
+    padding: 10px;
+}
 
