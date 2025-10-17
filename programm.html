@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8" >
     <title>Werkschau 2025 Programm</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="gestaltung.css" rel="stylesheet">
 </head>
 
 <body>
+    <svg class="hidden icons" id="arrow-1" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" xml:space="preserve">
+        <polygon points="65.52698,15.5227 59.08292,21.96412 82.56469,45.44472 -0.00001,45.44472 -0.00001,54.55704 82.56469,54.55704 59.08292,78.03706 65.52698,84.4773 100.00002,50.00161 "/>
+    </svg>
+    
     <div class="site">
         <header class="header">
             <div class="logo">
@@ -34,48 +40,61 @@
             <h1 class="ueberschrift">Freitag</h1>
             <div class="tag">
                 <div>
-                    <img src="bilder/programm/ws25.por-fredWolterBerlin.jpg" width="280">
-                    <p>12 00 — 13 30h</p>
-
-                    <h3>Workshop</h3>
-                    <h2>Fred Wolter</h2>
-                    <p>BZGUS—Bundeszentrale gegen <br>gestalterische Unredlichkeit und Satzverrohung</p>
                     <details>
-                        <summary>*Das schlechteste Plakat der Welt*</summary>
-                        <p>Heute brechen wir alle Regeln.<br> Wir gestalten bewusst gegen alles, was Typografie und Design zusammenhält, um zu sehen, was passiert, wenn Kunst mit Design verwechselt wird und Beliebigkeit als Freiheit gilt.
-                        <br><br> Das Ergebnis ist kein Witz, sondern ein Mahnmal: So sieht die Welt aus, wenn alle glauben, sie könnten 
-                        <br>Design, aber niemand mehr weiß, was es bedeutet. Ausgehend von der Idee »Understanding the rules and knowing when to break them« geht es um das Bewusstsein, 
-                        <br>warum Design existiert und was passiert, wenn niemand mehr weiß, was er tut.</p>
+                        <summary>
+                            <img src="bilder/programm/ws25.por-fredWolterBerlin.jpg" width="280">
+                            <p>12 00 — 13 30h</p>
+
+                            <h3>Workshop</h3>
+                            <h2>Fred Wolter</h2>
+                            <p>BZGUS—Bundeszentrale gegen gestalterische Unredlichkeit und Satzverrohung</p>
+                    
+                            <span class="expand">*Das schlechteste Plakat der Welt*</span>
+                        </summary>
+
+                        <div class="expanded">
+                            <p>Heute brechen wir alle Regeln.<br>Wir gestalten bewusst gegen alles, was Typografie und Design zusammenhält, um zu sehen, was passiert, wenn Kunst mit Design verwechselt wird und Beliebigkeit als Freiheit gilt.</p>
+                            
+                            <p>Das Ergebnis ist kein Witz, sondern ein Mahnmal: So sieht die Welt aus, wenn alle glauben, sie könnten 
+                            Design, aber niemand mehr weiß, was es bedeutet. Ausgehend von der Idee »Understanding the rules and knowing when to break them« geht es um das Bewusstsein, 
+                            warum Design existiert und was passiert, wenn niemand mehr weiß, was er tut.</p>
+                        </div>
                     </details>
                 </div>
 
                 <div>
-                    <img src="bilder/programm/ws25.Portrait_Cora_Pereghy.jpeg"  width="280px">
-                    <p>14 00 — 15 30h</p>
-                    <h3>Workshop</h3>
-                    <h2>Cora Jessica <br>Pereghy</h2>
-                    <p>Dozentin / Schwerpunktmodul <br>Advertising</p>
                     <details>
-                        <summary>Blitz-Vortrag & Poesie</summary>
-                        <p>Kaum eine Sprache kann Erlebtes und Gefühle so präzise ausdrücken wie die deutsche. Doch
-                        im allgegenwärtigen Denglish-Wahn gerät das
-                        oft in Vergessenheit. Genau hier setzt der Work-
-                        shop »Blitz-Vortrag & Poesie« an: Wir widmen
-                        uns der deutschen Sprache—ihrer Präzision
-                        und Tiefgründigkeit.
-                        <br><br>
-                        Im ersten Teil erhaltet ihr individuell ein Wort
-                        von mir. Eure Aufgabe: frei zu schreiben, was
-                        euch dazu in den Sinn kommt. Dieses Wort
-                        wird im zweiten Teil des Workshops zu <br>eurem
-                        »Produkt«, das ihr mir in einem Treppen-Blitz-Vortrag 
-                        von 1,5 Minuten verkaufen müsst. Diese
-                        Fusion ermöglicht euch einen <br>Einblick sowohl in
-                        das kreative Schreiben als auch in den schnell-
-                        lebigen Agenturalltag. <br>Ich freu’ mich auf euch!
-                        </p>
+                        <summary>
+                            <img src="bilder/programm/ws25.Portrait_Cora_Pereghy.jpeg"  width="280px">
+                            <p>14 00 — 15 30h</p>
+                            <h3>Workshop</h3>
+                            <h2>Cora Jessica <br>Pereghy</h2>
+                            <p>Dozentin / Schwer&shy;punktmodul <br>Advertising</p>
+                            <span class="expand">Blitz-Vortrag & Poesie
+                            </span>
+                        </summary>
+
+                        <div class="expanded">
+                            <p>Kaum eine Sprache kann Erlebtes und Gefühle so präzise ausdrücken wie die deutsche. Doch
+                            im allgegenwärtigen Denglish-Wahn gerät das
+                            oft in Vergessenheit. Genau hier setzt der Work-
+                            shop »Blitz-Vortrag & Poesie« an: Wir widmen
+                            uns der deutschen Sprache—ihrer Präzision
+                            und Tiefgründigkeit.</p>
+
+                            <p>Im ersten Teil erhaltet ihr individuell ein Wort
+                            von mir. Eure Aufgabe: frei zu schreiben, was
+                            euch dazu in den Sinn kommt. Dieses Wort
+                            wird im zweiten Teil des Workshops zu eurem
+                            »Produkt«, das ihr mir in einem Treppen-Blitz-Vortrag 
+                            von 1,5 Minuten verkaufen müsst. Diese
+                            Fusion ermöglicht euch einen Einblick sowohl in
+                            das kreative Schreiben als auch in den schnell-
+                            lebigen Agenturalltag.</p>
+                            <p>Ich freu’ mich auf euch!</p>
+                        </div>
                     </details>
-                </div>                
+                </div>
 
                 <div>
                     <img src="bilder/programm/ws25.por-tanmoy_roy.jpg"  width="280px">
@@ -116,9 +135,9 @@
          <h1 class="ueberschrift">Samstag</h1>
             <div class="tag">
 
-                <div><img src="bilder/programm/ws25.por-ACIDSOUP-Edgar_Koop.jpg"  width="280px"></div>
+                <div><img loading="lazy" src="bilder/programm/ws25.por-ACIDSOUP-Edgar_Koop.jpg"  width="280px"></div>
                 <div>
-                    <img src="bilder/programm/ws25.por-ACIDSOUP-Jonas_Stadter.jpg"  width="280px">
+                    <img loading="lazy" src="bilder/programm/ws25.por-ACIDSOUP-Jonas_Stadter.jpg"  width="280px">
                     <p>12 — 13h</p>
                     <h3>Workshop</h3>
                     <h2>Edgar Koop und Jonas Stadter</h2>
@@ -135,7 +154,7 @@
                 </div>
 
                 <div>
-                    <img src="bilder/programm/werkschauVernissage2.JPG">
+                    <img loading="lazy" src="bilder/programm/werkschauVernissage2.JPG">
                     <p>13 — 13 45h</p>
                     <h3>Zeig es uns!</h3>
                     <h2>Mappenberatung</h2>
@@ -145,7 +164,7 @@
                     </details>
                 </div>
                 <div>
-                    <img src="bilder/programm/ws25.por-JCHamilius.jpg" width="280px">
+                    <img loading="lazy" src="bilder/programm/ws25.por-JCHamilius.jpg" width="280px">
                     <p>14 — 15 30h</p>
                     <h3>Workshop</h3>
                     <h2>JC Hamilius</h2>
@@ -160,7 +179,7 @@
                 </div>
 
                 <div>
-                    <img src="bilder/programm/ws25-komma-cover.png">
+                    <img loading="lazy" src="bilder/programm/ws25-komma-cover.png">
                     <p>16h</p>
                     <h3>Event</h3>
                     <h2>Komma release</h2>
@@ -174,7 +193,7 @@
                 </div>
 
                 <div>
-                    <img src="bilder/programm/ws25.por-paul_hartmann.jpg" width="280px">
+                    <img loading="lazy" src="bilder/programm/ws25.por-paul_hartmann.jpg" width="280px">
                     <p>16 30 — 18h</p>
                     <h3>Workshop</h3>
                     <h2>Paul Hartmann</h2>
@@ -213,7 +232,7 @@
             <div class="tag">
 
                 <div>
-                    <img src="bilder/programm/ws25.por-falk_kastell.jpg" width="280px">
+                    <img loading="lazy" src="bilder/programm/ws25.por-falk_kastell.jpg" width="280px">
                     <p>12 — 14h</p>
                     <h3>Duftlabor workshop</h3>
                     <h2>Falk Kastell</h2>
@@ -233,7 +252,7 @@
                 </div>
 
                 <div>
-                    <img src="bilder/programm/werkschauVernissage2.JPG">
+                    <img loading="lazy" src="bilder/programm/werkschauVernissage2.JPG">
                     <p>14 — 15h</p>
                     <h3>Zeig es uns!</h3>
                     <h2>Mappenberatung</h2>
@@ -244,12 +263,12 @@
                 </div>
                 
                 <div>
-                    <img src="bilder/programm/ws25.por.martin.jpg" width="100px">
+                    <img loading="lazy" src="bilder/programm/ws25.por.martin.jpg" width="100px">
                     
                 </div>
 
                  <div>
-                    <img src="bilder/programm/ws25.por.apfel.jpg" width="100px">
+                    <img loading="lazy" src="bilder/programm/ws25.por.apfel.webp" width="100">
                     
                     <p>16h</p>
                     <h3>KiJ Disco</h3>
@@ -271,15 +290,15 @@
 
          <footer>
             <ul class="nav">
-                <li><a href="https://www.hs-mannheim.de/"><img src="bilder/logos/log.thMA-sw.jpg" alt="Logo der Technischen Hochschule Mannheim" style="width: 70%"></a></li>
-                <li><a href="https://mannheimer-kunstverein.de/"><img src="bilder/logos/log.mkv-sw.jpg"  alt="Logo des Mannheimer Kunstvereins" style="width: 50%"></a></li>
-                <li><a href="https://www.hs-mannheim.de/die-hochschule/forschung-und-transfer/nachwuchsfoerderung/promotionsstipendien-der-albert-und-anneliese-konanz-stiftung/aak-stiftung.html"><img src="bilder/logos/log.Konanz-sw.jpg"  alt="Logo der Konanz Stiftung" style="width: 60%"></a></li>
-                <li><a href="https://www.gestaltung.hs-mannheim.de/"><img src="bilder/logos/log.Fakultaet-sw.jpg" alt="Logo der Fakultät für Gestaltung" style="width: 60%"></a></li>
-                <li><a href="https://www.slanted.de/"><img src="bilder/logos/log.slanted.jpg" alt="Logo von Slanted" style="width: 70%"></a></li>
-                <li><a href="https://www.instagram.com/captchamannheim/"><img src="bilder/logos/log.captcha-sw.jpg" alt="Logo vom Capture Festival" style="width: 50%"></a></li>
-                <li><a href="https://komma-magazine.de/"><img src="bilder/logos/log.komma-sw.jpg" alt="Loggo der Komma" style="width: 35%"></a></li>
-                <li><a href="https://www.weinhammel.de/"><img src="bilder/logos/log.Hammel.jpg" alt="Logo von Hammel" style="width: 70%"></a></li>
-                <li><a href="https://www.welde.de/"><img src="bilder/logos/log.welde.jpg" alt="Logo von Welde" style="width: 60%"></a></li>
+                <li><a href="https://www.hs-mannheim.de/"><img loading="lazy" src="bilder/logos/log.thMA-sw.jpg" alt="Logo der Technischen Hochschule Mannheim" style="width: 70%"></a></li>
+                <li><a href="https://mannheimer-kunstverein.de/"><img loading="lazy" src="bilder/logos/log.mkv-sw.jpg"  alt="Logo des Mannheimer Kunstvereins" style="width: 50%"></a></li>
+                <li><a href="https://www.hs-mannheim.de/die-hochschule/forschung-und-transfer/nachwuchsfoerderung/promotionsstipendien-der-albert-und-anneliese-konanz-stiftung/aak-stiftung.html"><img loading="lazy" src="bilder/logos/log.Konanz-sw.jpg"  alt="Logo der Konanz Stiftung" style="width: 60%"></a></li>
+                <li><a href="https://www.gestaltung.hs-mannheim.de/"><img loading="lazy" src="bilder/logos/log.Fakultaet-sw.jpg" alt="Logo der Fakultät für Gestaltung" style="width: 60%"></a></li>
+                <li><a href="https://www.slanted.de/"><img loading="lazy" src="bilder/logos/log.slanted.jpg" alt="Logo von Slanted" style="width: 70%"></a></li>
+                <li><a href="https://www.instagram.com/captchamannheim/"><img loading="lazy" src="bilder/logos/log.captcha-sw.jpg" alt="Logo vom Capture Festival" style="width: 50%"></a></li>
+                <li><a href="https://komma-magazine.de/"><img loading="lazy" src="bilder/logos/log.komma-sw.jpg" alt="Loggo der Komma" style="width: 35%"></a></li>
+                <li><a href="https://www.weinhammel.de/"><img loading="lazy" src="bilder/logos/log.Hammel.jpg" alt="Logo von Hammel" style="width: 70%"></a></li>
+                <li><a href="https://www.welde.de/"><img loading="lazy" src="bilder/logos/log.welde.jpg" alt="Logo von Welde" style="width: 60%"></a></li>
             </ul>
         </footer>
     </div>
