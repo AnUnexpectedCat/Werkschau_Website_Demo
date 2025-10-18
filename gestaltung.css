@@ -268,7 +268,7 @@ img {
 .site header nav {
     grid-column-start: span 2;
     padding-inline-end: var(--padding-inline);
-    text-align: right;
+    text-align: end;
 }
 
 .site header nav ul {
@@ -278,6 +278,11 @@ img {
     gap: 0.25lh;
 }
 
+/*.site .nav-links li{
+    text-align: left;
+
+}*/
+  
 h2 {
     font-size: 30px;
     font-weight: 400;
@@ -341,25 +346,31 @@ details summary {
     display: block;
     cursor: pointer;
     /* padding: 0.5em 0.1em 0.35em; */
-    margin-block-end: 1rem;
+    
     border-top: 4px solid transparent;
     transition: border 0.3s;
 }
 
 details summary:hover {
-    border-top-color: var(--accent-color);
+    border-top-color: transparent;
 }
 
 details summary img { opacity: 1.0; transition: opacity 0.3s; }
 details summary:hover img { opacity: 0.9; }
 
+
 details summary .expand {
-    color: var(--accent-color);
+    color: currentColor;
+    font-size: medium;
+    font-weight: 350;
+    margin-block-end: 1rem;
+
 }
 
 details summary:hover .expand {
-    color: color-mix(in srgb, var(--accent-color) 70%, #fff);
+    color: color-mix(in srgb, var(--accent-color) 100%, #fff);
     text-decoration: underline;
+    margin-block-end: 1rem;
 }
 
 h3{
