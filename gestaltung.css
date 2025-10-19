@@ -392,6 +392,7 @@ p {
 
 a {
     color: currentColor;
+    text-decoration: none;
 }
 
 li {
@@ -489,34 +490,39 @@ main section {
 }
 
 .infobox{
-    border-bottom: var(--border);   
-    padding-inline: 4rem;
-    padding-block: 30px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-flow: column;
-    row-gap: 20px;
-    column-gap: 30px;
+    position: relative;
+    margin: var(--padding-inline);
+    max-width: 1500px;
+    height: calc(auto + 2rem);
+    background-image: url(bilder/ws25werkschauMotivGesicht.webp);
+    
 }
 
-.infobox div{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: start;
+.infobox::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /*background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%);*/
 }
 
-.infobox img {
-    width: 100%;
-    height: 100%;
-    flex: 1 1 auto;
-    object-fit: cover;
+.info_text {
+  color: #fff;
+  gap: 0.25lh;
+  padding-block: 1rem;
+  margin: var(--padding-inline);
 }
 
-.infobox h2 {
-    max-width: 500px;
-    margin: 0;
+.info_text_fliestext {
+  color: #fff;
+  gap: 0.25lh;
+  padding-top: -8rem;
+  padding-bottom: 2rem;
+
+  margin-inline: var(--padding-inline);
+  max-width: 50rem;
 }
+
 
 .container {
     display: grid;
