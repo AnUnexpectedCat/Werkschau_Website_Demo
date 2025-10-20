@@ -268,7 +268,7 @@ img {
 .site header nav {
     grid-column-start: span 2;
     padding-inline-end: var(--padding-inline);
-    text-align: end;
+    text-align: left;
 }
 
 .site header nav ul {
@@ -276,6 +276,14 @@ img {
     flex-direction: column;
     gap: 0.25rem;
     gap: 0.25lh;
+}
+
+.nav p {
+    max-width: 300px;
+}
+
+.nav h1 {
+    border: none;
 }
 
 /*.site .nav-links li{
@@ -398,6 +406,9 @@ a {
 li {
     list-style: none;
     display: block;
+    font-size: medium;
+    font-family: roboto;
+    font-weight: 350;
 }
 
 sup {
@@ -543,6 +554,24 @@ main section {
     padding: 10px;
 }
 
+.datenschutz {
+  padding-block: var(--padding-inline);
+  padding-inline: var(--padding-inline);
+  min-width: auto;
+  max-width: 1100px;
+  margin-bottom: var(--padding-inline);
+}
+
+.datenschutz h2 {
+  margin-block-start: 25px;
+  
+}
+
+.datenschutz li {
+  
+  
+}
+
 footer {
     padding-block: 50px;
     grid-column-start: span 6;
@@ -593,10 +622,4 @@ footer img {
     background: #fff;
 }
 
-.nav p {
-    max-width: 300px;
-}
 
-.nav h1 {
-    border: none;
-}
