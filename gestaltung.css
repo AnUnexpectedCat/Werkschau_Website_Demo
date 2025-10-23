@@ -339,7 +339,7 @@ h2 {
      }
 
     @media (min-width: 40rem) {
-        font-size: 20px;
+        font-size: 30px;
     }
 }
 
@@ -545,15 +545,22 @@ main section {
   gap: 0.25lh;
   padding-block: 1rem;
   margin: var(--padding-inline);
+  
+}
+
+.info_text h2 {
+  margin-top: 0;
+
 }
 
 .info_text_fliestext {
-  color: #fff;
+  color: #ffffff;
   gap: 0.25lh;
-  padding-top: -8rem;
-  padding-bottom: 2rem;
+  padding-top: -15rem;
+  padding-bottom: 1rem;
 
   margin-inline: var(--padding-inline);
+  
   max-width: 50rem;
 }
 
