@@ -5,7 +5,15 @@
     <title>Werkschau 2025</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="Werkschau 2025" />
+    <meta property="og:image" content="https://www.diewerkschaumannheim.de/bilder/preview.jpg" />
+    <meta property="og:image:width" content="1000" />
+    <meta property="og:image:height" content="600" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
     <link href="gestaltung.css" rel="stylesheet">
+    <script src="script.js" type="module"></script>
 </head>
 
 <body>
@@ -18,10 +26,17 @@
         <header class="header">
             <div class="logo">
                 <a href="index.html"><img src="bilder/logos/logo-werkschau.svg" alt="Logo der Werkschau" title="Werkschau"></a>
+                <nav class="main">
+                    <ul>
+                        <li><a href="infos.html" data-label="info">Info</a></li>
+                        <li><a href="programm.html" data-label="programm">Programm</a></li>
+                        <li><a href="presse.html" data-label="presse">Presse</a></li>
+                    </ul>
+                </nav>
             </div>
 
             <div class="teaser">
-                <a href="#">Werkschau Trailer</a>
+                <a href="https://www.instagram.com/werkschau_mannheim/reel/DQMIHJcjJXq/?hl=de">Werkschau Trailer</a>
             </div>
             
             <nav>
@@ -35,7 +50,7 @@
         </header>
         
         <main>
-            <section>
+            <section data-label="info">
                 <a href="infos.html">
                     <h1>Die Gruppe ist angezogen <svg class="icon arrow"><use href="#arrow-1" /></svg></h1>
 
@@ -46,14 +61,14 @@
                     </div>
                 </a>
             </section>
-            <section>
+            <section data-label="programm">
                 <a href="programm.html">
                     <h1>Was steht auf dem Programm? <svg class="icon arrow"><use href="#arrow-1" /></svg></h1>
                 </a>
             </section>
-            <section>
+            <section data-label="presse">
                 <a href="presse.html">
-                    <h1>Presse <svg class="icon arrow"><use href="#arrow-1" /></svg> Sinaaaa</h1>
+                    <h1>Presse <svg class="icon arrow"><use href="#arrow-1" /></svg> Sina</h1>
                 </a>
             </section>
            
