@@ -37,7 +37,7 @@ if (document.documentElement.classList.contains('home') && sections.length > 0) 
 	const sina = [...sections].find((element) => element.dataset.label == 'presse');
 	if (sina) {
 		sina.querySelector('h1').style.textWrap = 'initial';
-		var randomLength = Math.floor(Math.random() * (10 - 4 + 1) + 4);
+		var randomLength = Math.floor(Math.random() * (12 - 4 + 1) + 4);
 		
 		var sinaAddA = setInterval(addA, 150, sina); // dynamically add As
 
