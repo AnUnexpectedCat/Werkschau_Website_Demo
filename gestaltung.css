@@ -205,6 +205,11 @@
     width: 0;
 }
 
+.break {
+    margin-block-start: 0.5rem;
+    margin-block-start: 0.5lh;
+}
+
 svg.icon {
     width: 1em;
     height: 1em;
@@ -435,7 +440,8 @@ h1 {
     }
 }
 
-h2 {
+h2,
+.pressetext p {
     font-size: 20px;
     hyphens: auto;
     overflow-wrap: break-word;
@@ -444,9 +450,9 @@ h2 {
     font-family: roboto;
     font-weight: 350;
 
-     & + * {
+    & + * {
         margin-block-start: 1rem;
-     }
+    }
 
     @media (min-width: 40rem) {
         font-size: 30px;
@@ -466,7 +472,7 @@ h2 {
 }
 
 
-h3{
+h3 {
     font-size: smaller;
     font-weight: lighter;
     font-family: roboto;
@@ -477,17 +483,25 @@ h3{
     border-top: var(--border)
 }
 
-.site section a {
+.home .site section a {
     display: block;
     padding: 1rem var(--padding-inline);
     text-decoration: none;
     color: var(--text-color);
 }
 
-.site section a:hover,
-.site section.active a {
+.home .site section a:hover,
+.home .site section.active a {
     background-color: var(--accent-color);
     color: #fff;
+}
+
+.site section a.textlink {
+    color: var(--accent-color);
+}
+
+.site section a.textlink:is(:hover, :focus) {
+    text-decoration: underline;
 }
 
 .ueberschrift {
@@ -501,14 +515,9 @@ h3{
     
 }
 
-.ueberschrift-program {
+.programm .ueberschrift {
     border-top: var(--border);
     border-bottom: 0;
-    line-height: 1.1;
-    margin-block: 0;
-    padding-inline: var(--padding-inline);
-    padding-block-end: 0.5rem;
-    font-family: roboto;
 }
 
 details summary {
@@ -520,12 +529,14 @@ details summary {
     transition: border 0.3s;
 }
 
-details summary:hover {
+details summary:hover,
+details.active summary {
     border-top-color: transparent;
 }
 
 details summary img { opacity: 1.0; transition: opacity 0.3s; }
-details summary:hover img { opacity: 0.9; }
+details summary:hover img,
+details.active summary img { opacity: 0.9; }
 
 
 details summary .expand {
@@ -536,13 +547,12 @@ details summary .expand {
 
 }
 
-details summary:hover .expand {
+details summary:hover .expand,
+details.active summary .expand {
     color: color-mix(in srgb, var(--accent-color) 100%, #fff);
     text-decoration: underline;
     margin-block-end: 1rem;
 }
-
-
 
 p {
     hyphens: auto;
@@ -576,15 +586,13 @@ sup {
     width: 100px;
 }
 
-main{
+main {
   display: contents;
 }
 
 main section {
     grid-column-start: span 6;
 }
-
-
 
 .tag {
     /*border: 3px solid brown;/*/
@@ -605,8 +613,7 @@ main section {
     display: flex;
     justify-content: flex-start; 
     flex-direction: column;
-    
-    
+
     @media (min-width: 40rem) {
         /* flex-basis: calc(50% - (1rem * 1)); */
         flex-basis: 250px;
@@ -619,7 +626,7 @@ main section {
 }
 
 .tag sup {
-    color: blue;
+    color: var(--accent-color);
     font-size: medium;
 }
 
@@ -632,8 +639,6 @@ main section {
 .tag p {
     margin-block: 7px;
     margin-block: 0.25lh;
-
-
 }
 
 .tag h3 {
@@ -656,13 +661,12 @@ main section {
     max-width: 300px;
 }
 
-.infobox{
+.infobox {
     position: relative;
     margin: var(--padding-inline);
     max-width: 1500px;
     height: calc(auto + 2rem);
     background-image: url(bilder/ws25werkschauMotivGesicht.webp);
-    
 }
 
 .infobox::before {
@@ -670,7 +674,7 @@ main section {
   position: absolute;
   width: 100%;
   height: 100%;
-  /*background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%);*/
+  /* background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%); */
 }
 
 .info_text {
@@ -678,12 +682,10 @@ main section {
   gap: 0.25lh;
   padding-block: 1rem;
   margin: var(--padding-inline);
-  
 }
 
 .info_text h2 {
   margin-top: 0;
-
 }
 
 .info_text_fliestext {
@@ -717,7 +719,8 @@ main section {
     padding: 10px;
 }
 
-.datenschutz {
+.datenschutz,
+.pressetext {
   padding-block: var(--padding-inline);
   padding-inline: var(--padding-inline);
   min-width: auto;
@@ -725,11 +728,14 @@ main section {
   margin-bottom: var(--padding-inline);
 }
 
-.datenschutz h2 {
+:is(.datenschutz, .pressetext) h2 {
+  margin-block-start: 0.5em;
   margin-block-start: 0.25lh;
-  
 }
 
+:is(.datenschutz, .pressetext) p {
+    line-height: 1.25;
+}
 
 footer {
     padding-block: 50px;

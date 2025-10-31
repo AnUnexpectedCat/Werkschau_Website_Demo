@@ -32,7 +32,6 @@ if (document.documentElement.classList.contains('home') && sections.length > 0) 
 		});
 	}
 
-
 	// dynamic AAAAAAAA
 	const sina = [...sections].find((element) => element.dataset.label == 'presse');
 	if (sina) {
@@ -51,4 +50,30 @@ if (document.documentElement.classList.contains('home') && sections.length > 0) 
 		randomLength -= 1;
 		if (randomLength <= 0) clearInterval(sinaAddA);
 	}
+}
+
+if (document.documentElement.classList.contains('programm')) {
+	
+	const linkedElements = document.querySelectorAll('[data-target]');
+	
+	for (const ele of linkedElements) {
+		ele.addEventListener('pointerenter', function (e) {
+			const t = document.getElementById(e.target.dataset.target);
+
+			if (t) { t.classList.add('active');	}
+		});
+
+		ele.addEventListener('pointerleave', function (e) {
+			const t = document.getElementById(e.target.dataset.target);
+
+			if (t) { t.classList.remove('active'); }
+		});
+
+		ele.addEventListener('click', function (e) {
+			const t = document.getElementById(e.target.closest('details').dataset.target);
+
+			if (t) { t.open = !t.open; }
+		});
+	}
+
 }
