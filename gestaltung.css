@@ -479,11 +479,14 @@ h3 {
     font-weight: 350;
 }
 
-.home .site section {
+.home .site section,
+.programm_link {
     border-top: var(--border)
 }
 
-.home .site section a {
+
+.home .site section a,
+.infos .site section a {
     display: block;
     padding: 1rem var(--padding-inline);
     text-decoration: none;
@@ -491,6 +494,7 @@ h3 {
 }
 
 .home .site section a:hover,
+.infos .site section a:hover,
 .home .site section.active a {
     background-color: var(--accent-color);
     color: #fff;
@@ -519,6 +523,25 @@ h3 {
     border-top: var(--border);
     border-bottom: 0;
 }
+
+/*
+.infos .site section a {
+    display: block;
+  }
+
+
+.programm-link {
+    display: block;
+    border-top: var(--border);
+    border-bottom: 0;
+}
+
+.infos .site a:hover{
+    background-color: var(--accent-color);
+    color: #fff;
+}*/
+
+
 
 details summary {
     display: block;
@@ -787,4 +810,28 @@ footer img {
     background: #fff;
 }
 
+.modal-container {
+  background-color: rgba(0, 0, 0.3, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
 
+}
+
+.modal-container .show{
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modal {
+  background-color: #fff;
+  max-width: 100%;
+  width: 300px;
+}

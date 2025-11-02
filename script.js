@@ -3,6 +3,10 @@ const logoNav = document.querySelector('.logo nav.main');
 const links = logoNav.querySelectorAll('a');
 const sections = document.querySelectorAll('main > section');
 
+const open = document.getElementById('open');
+const modal_container = document.getElementById('modal_container');
+const close = document.getElementById('close');
+
 console.log('Hallo Selim!');
 
 if (document.documentElement.classList.contains('home') && sections.length > 0) {
@@ -77,3 +81,12 @@ if (document.documentElement.classList.contains('programm')) {
 	}
 
 }
+
+
+open.addEventListener('click', () =>{
+	modal_container.classList.add('show');
+});
+
+close.addEventListener('click', () => {
+	modal_container.classList.remove('show');
+});
