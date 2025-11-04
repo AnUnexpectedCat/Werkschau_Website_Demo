@@ -3,9 +3,9 @@ const logoNav = document.querySelector('.logo nav.main');
 const links = logoNav.querySelectorAll('a');
 const sections = document.querySelectorAll('main > section');
 
-const open = document.getElementById('open');
-const modal_container = document.getElementById('modal_container');
-const close = document.getElementById('close');
+const open = document.querySelector('#open');
+const modal_container = document.querySelector('#modal_container');
+const close = document.querySelector('#close');
 
 console.log('Hallo Selim!');
 
@@ -82,11 +82,10 @@ if (document.documentElement.classList.contains('programm')) {
 
 }
 
-
-open.addEventListener('click', () =>{
+open?.addEventListener('click', () =>{
 	modal_container.classList.add('show');
 });
 
-close.addEventListener('click', () => {
+close?.addEventListener('click', () => {
 	modal_container.classList.remove('show');
 });
