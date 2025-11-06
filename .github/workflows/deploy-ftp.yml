@@ -19,6 +19,12 @@ jobs:
     steps:
     - name: Get latest code
       uses: actions/checkout@v4
+
+    - name: Inject commit SHA into HTML
+      run: |
+        SHORT_SHA=${GITHUB_SHA::7}
+        find . -name '*.html' -print0 \
+          | xargs -0 sed -i "s|<!-- VERSION_PLACEHOLDER -->|<!-- version: ${SHORT_SHA} -->|g"
     
     - name: Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.6
