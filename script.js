@@ -6,6 +6,8 @@ const sections = document.querySelectorAll('main > section');
 const open = document.getElementById('open');
 const modal_container = document.getElementById('modal_container');
 const close = document.getElementById('close');
+const ausere_box = document.getElementById('ausere_box');
+const innere_box = document.getElementById('innere_box');
 
 console.log('Hallo Selim!');
 
@@ -83,10 +85,29 @@ if (document.documentElement.classList.contains('programm')) {
 }
 
 
-open.addEventListener('click', () =>{
+open.addEventListener('click', () => {
 	modal_container.classList.add('show');
 });
 
 close.addEventListener('click', () => {
 	modal_container.classList.remove('show');
 });
+
+//ausere_box.onclick = function(e) {
+//		innere_box.classList.toggle("show");
+//		ausere_box.classList.toggle("");
+//	}
+//	
+//});
+
+//var video = document.getElementById("modal");
+//     function stopVideo(){
+//          video.pause();
+//          video.currentTime = 0;
+//	 }
+//
+//$('body').on('hidden.bs.modal', '.modal', function () {
+//$('video').trigger('pause');
+//});
+
+//$("modal").pause();

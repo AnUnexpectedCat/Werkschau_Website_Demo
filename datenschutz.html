@@ -11,6 +11,7 @@
     <meta property="og:image:width" content="1000" />
     <meta property="og:image:height" content="600" />
 
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
     <link href="gestaltung.css" rel="stylesheet">
     <script src="script.js" type="module"></script>
@@ -35,8 +36,22 @@
             </div>
 
             <div class="teaser">
-                <a href="https://www.instagram.com/werkschau_mannheim/reel/DQMIHJcjJXq/?hl=de">Werkschau Trailer</a>
-            </div>
+                <button id="open">
+                    Werkschau Trailer
+                </button>
+
+                <div class="modal-container" id="modal_container" >
+                    <div class="modal">
+                        <video controls width="300px" id="werkschau_trailer_2">
+                          <source src="videos/Formgestaltung_V2.mp4">
+                         </video>
+                        
+                        <button class="Video_aus_Knopf" id="close">
+                            Zurück zur Website
+                        </button>
+                    </div>
+                </div>
+            </div> 
             
             <nav>
                 <ul>

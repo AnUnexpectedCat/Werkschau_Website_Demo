@@ -810,6 +810,28 @@ footer img {
     background: #fff;
 }
 
+button {
+  display: block;
+  list-style: none;
+  display: block;
+  font-size: medium;
+  font-family: roboto;
+  font-weight: 350;
+  background-color:transparent;
+  border: none;
+  padding: 10px, 25px;
+  cursor: pointer;
+}
+
+/*
+.teaser {
+  cursor: pointer;
+  margin: 10px;
+  background-color: blue;
+}
+*/
+
+
 .modal-container {
   background-color: rgba(0, 0, 0.3, 0.2);
   display: flex;
@@ -818,14 +840,17 @@ footer img {
   position: fixed;
   opacity: 0;
   pointer-events: none;
+  
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-
+  transition: ease-in-out 0.5s ease;
+  transition-delay: 0.5s;
 }
 
-.modal-container .show{
+
+.modal-container.show{
   pointer-events: auto;
   opacity: 1;
 }
@@ -835,3 +860,10 @@ footer img {
   max-width: 100%;
   width: 300px;
 }
+
+.Video_aus_Knopf {
+  padding-inline: 15px;
+  margin-block: 5px;
+}
+
+
