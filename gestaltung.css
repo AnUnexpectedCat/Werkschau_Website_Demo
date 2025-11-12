@@ -735,7 +735,7 @@ main section {
     gap: 20px;
 }
 
-.container img{
+.container img {
     display: block;
     width: 100%;
     margin-inline: auto;
@@ -819,8 +819,11 @@ button {
   font-weight: 350;
   background-color:transparent;
   border: none;
-  padding: 10px, 25px;
   cursor: pointer;
+}
+
+.modal-container button {
+    padding: 10px 25px;
 }
 
 /*
@@ -833,12 +836,20 @@ button {
 
 
 .modal-container {
-  background-color: rgba(0, 0, 0.3, 0.2);
-  display: flex;
+  box-sizing: content-box;
+  background-color: #fff;
+  width: min(300px, 100%);
+  height: min(auto, 80dvh);
+  inset: 0;
+  margin: auto;
+  
+  /*
   align-items: center;
   justify-content: center;
+  background-color: rgb(0 0 3 / 0.2);
+  
   position: fixed;
-  opacity: 0;
+  z-index: 100;
   pointer-events: none;
   
   top: 0;
@@ -847,23 +858,46 @@ button {
   height: 100vh;
   transition: ease-in-out 0.5s ease;
   transition-delay: 0.5s;
+  */
 }
 
+.modal-container video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 9/16 auto;
+}
 
-.modal-container.show{
+body:has([popover]:popover-open) .backdrop {
+    display: block;
+    position: fixed;
+    z-index: 50;
+    inset: 0;
+    background-color: rgb(0 0 3 / 0.2);
+    backdrop-filter: blur(3px);
+    pointer-events: auto;
+}
+
+::backdrop {
+  
+}
+
+.modal-container.show,
+.modal-container:popover-open {
+  display: flex;
   pointer-events: auto;
-  opacity: 1;
+  /* opacity: 1; */
 }
 
 .modal {
-  background-color: #fff;
-  max-width: 100%;
-  width: 300px;
+
 }
 
 .Video_aus_Knopf {
-  padding-inline: 15px;
-  margin-block: 5px;
+  text-align: center;
+  width: 100%;
+
+  &:hover {
+    background: var(--accent-color);
+    color: #fff;
+  }
 }
-
-

@@ -3,9 +3,10 @@ const logoNav = document.querySelector('.logo nav.main');
 const links = logoNav.querySelectorAll('a');
 const sections = document.querySelectorAll('main > section');
 
-const open = document.querySelector('#open');
-const modal_container = document.querySelector('#modal_container');
-const close = document.querySelector('#close');
+/* handled using the Popover API */
+// const open = document.querySelector('#open');
+// const modal_container = document.querySelector('#modal_container');
+// const close = document.querySelector('#close');
 
 console.log('Hallo Selim!');
 
@@ -82,6 +83,7 @@ if (document.documentElement.classList.contains('programm')) {
 
 }
 
+/*
 open?.addEventListener('click', () =>{
 	modal_container.classList.add('show');
 });
@@ -89,3 +91,4 @@ open?.addEventListener('click', () =>{
 close?.addEventListener('click', () => {
 	modal_container.classList.remove('show');
 });
+*/

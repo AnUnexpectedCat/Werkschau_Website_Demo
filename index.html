@@ -38,24 +38,23 @@
 
            
             <div class="teaser">
-                <button id="open">
-                    Werkschau Trailer
-                </button>
+                <button id="open" popovertarget="modal_container">Werkschau Trailer</button>
 
-                <div class="modal-container" id="modal_container" >
+                <div class="backdrop" popovertarget="modal_container" popovertargetaction="hide"></div>
+                <div popover class="modal-container" id="modal_container" >
                     <div class="modal">
-                        <video controls width="300px" id="werkschau_trailer_2">
-                          <source src="videos/Formgestaltung_V2.mp4">
+                        <video preload="none" controls playsinline width="300" poster="bilder/video-vorschau.jpg"  id="werkschau_trailer_2">
+                            <source src="videos/Formgestaltung_V2-500.mp4">
+
+                            <!-- Fallback -->
+                            <a href="videos/Formgestaltung_V2-500.mp4">Download (4MB)</a><br>
+                            <a href="videos/Formgestaltung_V2.mp4">Download (72MB)</a>
                          </video>
                         
-                        <button class="Video_aus_Knopf" id="close">
-                            Zurück zur Website
-                        </button>
+                        <button class="Video_aus_Knopf" id="close" popovertarget="modal_container" popovertargetaction="hide">Zurück zur Website</button>
                     </div>
                 </div>
-            </div> 
-            
-            
+            </div>
 
             <nav>
                 <ul>
